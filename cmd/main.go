@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
+
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/mnecas/ec2-to-ova/pkg/client"
 	"github.com/mnecas/ec2-to-ova/pkg/ova"
-	"os"
 )
 
 func main() {
