@@ -124,8 +124,8 @@ func FormatToOVF(exportImageTaskId string, instance *types.Instance, instanceTyp
 			InstanceID:          strconv.Itoa(itemInstanceID),
 			ResourceType:        10, // Ethernet Adapter
 			ResourceSubType:     "E1000",
-			ElementName:         fmt.Sprintf("Ethernet %d", networkIndex),
-			Description:         fmt.Sprintf("E1000 ethernet adapter on \"%s\"", networkName),
+			ElementName:         fmt.Sprintf("Network adapter %d", networkIndex),
+			Description:         fmt.Sprintf("Network adapter on %s", networkName),
 			Connection:          networkName,
 			AutomaticAllocation: &autoAlloc,
 		})
