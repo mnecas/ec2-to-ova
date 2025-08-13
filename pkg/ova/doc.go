@@ -27,6 +27,7 @@ type References struct {
 type File struct {
 	Href string `xml:"ovf:href,attr"`
 	Size int64  `xml:"ovf:size,attr"`
+	Id   string `xml:"ovf:id,attr"`
 }
 
 type DiskSection struct {

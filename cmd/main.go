@@ -13,7 +13,7 @@ import (
 func main() {
 	// --- Argument Parsing ---
 	if len(os.Args) != 2 {
-		fmt.Println("Usage: go run main.go <AMI_ID>")
+		fmt.Println("Usage: ec2-to-ova <AMI_ID>")
 		os.Exit(1)
 	}
 	exportImageTaskId := os.Args[1]
@@ -61,5 +61,4 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Unable to format OVF: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Println("Done")
 }

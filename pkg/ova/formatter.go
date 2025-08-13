@@ -3,10 +3,11 @@ package ova
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/aws/aws-sdk-go-v2/aws"
-	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"path"
 	"strconv"
+
+	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 )
 
 func getInstanceName(instance *types.Instance) string {
@@ -78,6 +79,7 @@ func FormatToOVF(exportImageTaskId string, instance *types.Instance, instanceTyp
 			// export-ami-1545f5ce7236bf35t-dev-sda1.raw
 			Href: fmt.Sprintf("%s-dev-%s.raw", exportImageTaskId, path.Base(*bdm.DeviceName)),
 			Size: diskCapacity,
+			Id:   fileRefID,
 		})
 
 		// Create Disk section entry
